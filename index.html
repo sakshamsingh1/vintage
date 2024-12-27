@@ -93,8 +93,7 @@
                   <span>Demo Video</span>
                 </a>
               </span>
-              <!-- Code Link. -->
-              <!-- Dataset Link. -->
+
             </div>
 
           </div>
@@ -104,6 +103,137 @@
   </div>
 </section>
 
+<section class="hero teaser" style="margin-top: -40px;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      
+      <div class="column is-three-quarters">
+        <h3 class="has-text-centered" style="font-size: 1.2rem;">
+          <b>TLDR:</b> We introduce <strong>VinTAGe</strong>strong> model, that can generate visually aligned and text-corresponding sounds,
+          including both onscreen and offscreen sound sources, providing a more holistic audio experience.
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  
+<div class="slider-container">
+  <div class="slider-item">
+    <p class="video-title">Text input: dog barking, high quality.</p>
+    <div class="item">
+      <video autoplay loop muted playsinline onclick="toggleMute(this)">
+        <source src="./static/videos/steve.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="slider-item">
+    <p class="video-title">Text input: playing harp, high quality.</p>
+    <div class="item">
+      <video autoplay loop muted playsinline onclick="toggleMute(this)">
+        <source src="./static/videos/steve.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="slider-item">
+    <p class="video-title">Text input: heavy punch, high quality.</p>
+    <div class="item">
+      <video autoplay loop muted playsinline onclick="toggleMute(this)">
+        <source src="./static/videos/steve.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>  
+-->
+  
+<section class="hero is-light is-small" style="margin-top: 10px;">
+  <div class="hero-body" style="padding-top: 1rem; padding-bottom: 0.5rem;">
+    <div class="container" style="text-align:center">
+      <p style="margin-bottom: 10px; font-size: 11pt;">
+        Click on each video to <strong>unmute or mute</strong>.
+      </p>
+      <center>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div id="slider" class="slider" tabindex="0">
+            <div class="slider-container" style="opacity: 1; width: 1500px; transform: translate3d(0, 0, 0);">
+              <!-- Video 1 -->
+              <div class="slider-item" style="width: 500px;">
+                <p class="video-title">Text input: dog barking, high quality.</p>
+                <div class="item">
+                  <video autoplay loop muted playsinline onclick="toggleMute(this)">
+                    <source src="./static/videos/steve.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video 2 -->
+              <div class="slider-item" style="width: 500px;">
+                <p class="video-title">Text input: playing harp, high quality.</p>
+                <div class="item">
+                  <video autoplay loop muted playsinline onclick="toggleMute(this)">
+                    <source src="./static/videos/steve.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video 3 -->
+              <div class="slider-item" style="width: 500px;">
+                <p class="video-title">Text input: heavy punch, high quality.</p>
+                <div class="item">
+                  <video autoplay loop muted playsinline onclick="toggleMute(this)">
+                    <source src="./static/videos/steve.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="slider-navigation-previous" onclick="navigateSlider(-1)">
+              <svg viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+              </svg>
+            </div>
+            <div class="slider-navigation-next" onclick="navigateSlider(1)">
+              <svg viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </center>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleMute(clickedVideo) {
+    // Get all video elements
+    const allVideos = document.querySelectorAll('video');
+
+    // Loop through all videos and mute them, except for the clicked video
+    allVideos.forEach(video => {
+      if (video !== clickedVideo) {
+        video.muted = true;  // Mute other videos
+      }
+    });
+
+    // Toggle mute on the clicked video
+    clickedVideo.muted = !clickedVideo.muted;
+  }
+</script>
+
+<script>
+  function navigateSlider(direction) {
+    const sliderContainer = document.querySelector('.slider-container');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const itemWidth = sliderItems[0].offsetWidth;
+    const totalItems = sliderItems.length;
+
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+    const offset = -currentIndex * itemWidth;
+
+    sliderContainer.style.transform = `translate3d(${offset}px, 0, 0)`;
+  }
+</script>
+  
+  
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
