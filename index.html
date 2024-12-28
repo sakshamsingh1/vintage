@@ -243,98 +243,62 @@
 </script>
 -->
 
-<section class="hero is-light is-small" style="margin-top: 10px;">
-  <div class="hero-body" style="padding-top: 1rem; padding-bottom: 0.5rem;">
+<section class="hero is-light is-small">
+  <div class="hero-body">
     <div class="container">
-
-      <p style="margin-bottom: 10px; font-size: 11pt; text-align: center;">
-        Click on each video to <strong>unmute or mute</strong> its generated audio.
-        For the best experience, use headphones.
-      </p>
-      
-      <!-- Swiper container -->
-      <div class="swiper myVideoSwiper">
-
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Each .swiper-slide becomes one "slide" in the carousel -->
-          
-          <div class="swiper-slide">
-            <div class="video-container">
-              <video autoplay loop muted playsinline onclick="toggleMute(this)" style="width: 100%; border-radius: 10px;">
-                <source src="./static/videos/our_otter_wind.mp4" type="video/mp4">
-              </video>
-              <p class="video-title" style="margin-top: 10px; text-align: center;">
-                Text input: Lion roaring
-              </p>
-            </div>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="video-container">
-              <video autoplay loop muted playsinline onclick="toggleMute(this)" style="width: 100%; border-radius: 10px;">
-                <source src="./static/videos/our_otter_wind.mp4" type="video/mp4">
-              </video>
-              <p class="video-title" style="margin-top: 10px; text-align: center;">
-                Text input: Dog barking
-              </p>
-            </div>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="video-container">
-              <video autoplay loop muted playsinline onclick="toggleMute(this)" style="width: 100%; border-radius: 10px;">
-                <source src="./static/videos/our_otter_wind.mp4" type="video/mp4">
-              </video>
-              <p class="video-title" style="margin-top: 10px; text-align: center;">
-                Text input: Explosion
-              </p>
-            </div>
-          </div>
-
-          <!-- Add more .swiper-slide blocks as needed for more videos. -->
-
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/our_otter_wind.mp4"
+                    type="video/mp4">
+          </video>
         </div>
-        <!-- /swiper-wrapper -->
-
-        <!-- If you want navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- (Optional) Pagination bullets -->
-        <!-- <div class="swiper-pagination"></div> -->
-
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/our_suv.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/our_otter_wind.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/our_suv.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%" style="cursor: pointer;" onclick="toggleMute(this)">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
       </div>
-      <!-- /Swiper container -->
-
     </div>
   </div>
-</section>
-
-<script>
-  // Basic mute toggle (example)
-  function toggleMute(videoElem) {
-    videoElem.muted = !videoElem.muted;
-  }
-
-  // Initialize Swiper
-  var mySwiper = new Swiper('.myVideoSwiper', {
-    loop: true,              // Enables continuous loop
-    slidesPerView: 3,        // Number of slides to show at once (adjust as needed)
-    spaceBetween: 20,        // Space (in px) between slides
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // Enable pagination if you want
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true,
-    // }
-    // Optionally enable other features like autoplay, etc.
-  });
-</script>
-  
+</section>  
   
 
 <section class="section">
