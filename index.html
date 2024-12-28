@@ -149,6 +149,58 @@
   </div>
 </section>
 
+<section class="hero is-light is-small" style="margin-top: 10px;">
+  <div class="hero-body" style="padding-top: 1rem; padding-bottom: 0.5rem;">
+    <div class="container" style="text-align:center">
+      <p style="margin-bottom: 10px; font-size: 11pt;">
+        Click on each video to <strong>unmute or mute</strong> its generated audio and listen with headphones for the best experience.
+      </p>
+      <center>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div id="slider" class="slider" tabindex="0">
+            <div class="slider-container" style="opacity: 1; transition: 300ms;">
+              <!-- Video 1 -->
+              <div class="slider-item" style="width: 500px;">
+                <p class="video-title">Text input: Video 1 description</p>
+                <div class="item">
+                  <video autoplay loop muted playsinline onclick="toggleMute(this)">
+                    <source src="./static/videos/our_otter_wind.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video 2 -->
+              <div class="slider-item" style="width: 500px;">
+                <p class="video-title">Text input: Video 2 description</p>
+                <div class="item">
+                  <video autoplay loop muted playsinline onclick="toggleMute(this)">
+                    <source src="./static/videos/our_otter_wind.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video 3 -->
+              <div class="slider-item" style="width: 500px;">
+                <p class="video-title">Text input: Video 3 description</p>
+                <div class="item">
+                  <video autoplay loop muted playsinline onclick="toggleMute(this)">
+                    <source src="./static/videos/our_otter_wind.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+            <!-- Navigation -->
+            <div class="slider-navigation-previous"></div>
+            <div class="slider-navigation-next"></div>
+            <div class="slider-pagination"></div>
+          </div>
+        </div>
+      </center>
+    </div>
+  </div>
+</section>
+
+
+
+  
 <script>
   function toggleMute(clickedVideo) {
     // Get all video elements
