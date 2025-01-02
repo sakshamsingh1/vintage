@@ -280,6 +280,68 @@
   </div>
 </section>
 
+<script>
+  function changeVideo(videoSrc, buttonElement, videoElementId) {
+      // Mute all videos
+      const allVideos = document.querySelectorAll('video');
+      allVideos.forEach(video => {
+        video.muted = true; // Mute all videos
+      });
+
+      // Pause all other videos except the current one
+      const currentVideo = document.getElementById(videoElementId);
+      const allCustVideos = document.querySelectorAll('.custom-video');
+      allCustVideos.forEach(video => {
+        if (video !== currentVideo) {
+          video.pause(); // Pause all other videos
+        }
+      });
+
+      // Check if the button is already selected
+      const isButtonSelected = buttonElement.classList.contains('selected');
+
+      if (isButtonSelected) {
+        // If the button is selected, toggle play/pause for the video
+        if (currentVideo.paused) {
+          currentVideo.play();
+          currentVideo.muted = false;
+        } else {
+          currentVideo.pause();
+        }
+      } else {
+        // Remove 'selected' class from all buttons
+        const buttons = document.querySelectorAll('.custom-button-area .button');
+        buttons.forEach(button => button.classList.remove('selected'));
+
+        // Add 'selected' class to the clicked button
+        buttonElement.classList.add('selected');
+
+        // Update video source if needed
+        if (currentVideo.src !== videoSrc) {
+          currentVideo.src = videoSrc;
+          currentVideo.load(); // Ensure the new source is loaded
+        }
+
+        // Unmute and play the selected video
+        currentVideo.muted = false;
+        currentVideo.play();
+      }
+    }
+  
+  
+</script>
+
+<script>
+function setupVideos() {
+      for (const video of document.querySelectorAll('.custom-video-2')) {
+        video.controls = false
+        video.addEventListener('mouseover', () => { video.controls = 'controls' })
+        video.addEventListener('mouseout', () => { video.controls = false })
+      }
+    }
+    window.addEventListener('load', setupVideos, false)
+</script>  
+
 
 <section class="section">
   <div class="container is-max-desktop">
