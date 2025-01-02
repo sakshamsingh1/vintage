@@ -112,6 +112,7 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  max-width: 1000px;
 }
 
 .results-carousel .item {
