@@ -237,10 +237,10 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered" id="text-refoley">Foley Generation with Text Control</h2>
+        <h2 class="title is-3 has-text-centered" id="text-refoley">Joint Visual and Text-Conditioned Audio Generation</h2>
         <div class="content has-text-justified">
           <p>
-            We generate a synchronized soundtrack for slient videos given a text prompt. In the examples below you can <strong>select the text prompt using the buttons on the right</strong> of the video to hear the corresponding generated audio for that video. (Click the button to play the video, and click it again to pause.)
+            We generate a soundtrack for silent videos given a text prompt. In the examples below, you can <strong>select the text prompt using the buttons on the right</strong> of the video to hear the corresponding generated audio for that video. (Click the button to play the video, and click it again to pause.)
           </p>
           
           <!-- bird refoley examples -->
@@ -248,8 +248,8 @@
             <div class="custom-columns">
               <!-- Video Section -->
               <div class="custom-video-container">
-                <video id="bird-video-player" unmute="" playsinline="" class="custom-video">
-                  <source id="video-source" src="./static/videos/text-refoley/bird/bird-chirping.mp4#t=0.0001" type="video/mp4">
+                <video id="bird-video-player" unmute playsinline controls poster="./static/images/thumbnail.jpg" class="custom-video">
+                  <source id="video-source" src="./static/videos/our_otter.mp4#t=0.0001" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -257,46 +257,17 @@
               <!-- Choice Section -->
               <div class="custom-button-container">
                 <div class="custom-button-area">
-                  <button class="button is-link is-small" onclick="changeVideo('./static/videos/text-refoley/bird/bird-chirping.mp4', this, 'bird-video-player')">
-                    bird chirping
+                  <button class="button is-link is-small" aria-label="Select bird chirping audio" onclick="changeVideo('./static/videos/our_otter.mp4', this, 'bird-video-player')">
+                    An otter growls
                   </button>
-                  <button class="button is-primary is-small" onclick="changeVideo('./static/videos/text-refoley/bird/rooster-crow.mp4', this, 'bird-video-player')">
-                    rooster crowing
+                  <button class="button is-primary is-small" aria-label="Select rooster crowing audio" onclick="changeVideo('./static/videos/our_otter_sea.mp4', this, 'bird-video-player')">
+                    An otter growls and soft sea waves crashes
                   </button>
-                  <button class="button is-info is-small" onclick="changeVideo('./static/videos/text-refoley/bird/male-speaking.mp4', this, 'bird-video-player')">
-                    male speaking
+                  <button class="button is-info is-small" aria-label="Select male speaking audio" onclick="changeVideo('./static/videos/our_otter_wind.mp4', this, 'bird-video-player')">
+                    An otter growls and soft wind is blowing
                   </button>
-                  <button class="button is-success is-small" onclick="changeVideo('./static/videos/text-refoley/bird/sheep.mp4', this, 'bird-video-player')">
-                    sheep bleating
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- cat refoley examples -->
-          <div class="custom-container" id="cat-refoley">
-            <div class="custom-columns">
-              <!-- Video Section -->
-              <div class="custom-video-container">
-                <video id="cat-video-player" playsinline="" class="custom-video">
-                  <source id="video-source" src="./static/videos/text-refoley/cat/cat-meowing.mp4#t=0.0001" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-          
-              <!-- Choice Section -->
-              <div class="custom-button-container">
-                <div class="custom-button-area">
-                  <button class="button is-link is-small" onclick="changeVideo('./static/videos/text-refoley/cat/cat-meowing.mp4', this, 'cat-video-player')">
-                    cat meowing
-                  </button>
-                  <button class="button is-primary is-small" onclick="changeVideo('./static/videos/text-refoley/cat/lion-roaring.mp4', this, 'cat-video-player')">
-                    lion roaring
-                  </button>
-                  <button class="button is-info is-small" onclick="changeVideo('./static/videos/text-refoley/cat/horse-neighing.mp4', this, 'cat-video-player')">
-                    horse neighing
+                  <button class="button is-success is-small" aria-label="Select sheep bleating audio" onclick="changeVideo('./static/videos/our_otter_countryMusic.mp4', this, 'bird-video-player')">
+                    An otter growls and country music is playing
                   </button>
                 </div>
               </div>
@@ -304,11 +275,11 @@
           </div>
 
         </div>
-        
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
