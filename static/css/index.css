@@ -280,7 +280,7 @@ body {
   }
 
   .custom-button-area .button {
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: auto;
     /* Vary width based on text length */
     border-radius: 10px;
