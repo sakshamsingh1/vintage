@@ -237,13 +237,73 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered" id="text-refoley">Joint Visual and Text-Conditioned Audio Generation</h2>
+        <h2 class="title is-4 has-text-centered" id="text-refoley">Joint Visual and Text-Conditioned Audio Generation</h2>
         <div class="content has-text-justified">
           <p>
             We generate a soundtrack for silent videos given a text prompt. In the examples below, you can <strong>select the text prompt using the buttons on the right</strong> of the video to hear the corresponding generated audio for that video. (Click the button to play the video, and click it again to pause.)
           </p>
           
-          <!-- bird refoley examples -->
+          <!-- plane examples -->
+          <div class="custom-container" id="bird-refoley">
+            <div class="custom-columns">
+              <!-- Video Section -->
+              <div class="custom-video-container">
+                <video id="plane-video-player" unmute playsinline class="custom-video">
+                  <source id="video-source" src="./static/videos/plane/plane.mp4#t=0.0001" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+          
+              <!-- Choice Section -->
+              <div class="custom-button-container">
+                <div class="custom-button-area">
+                  <button class="button is-link is-small" aria-label="Select bird chirping audio" onclick="changeVideo('./static/videos/plane/plane.mp4', this, 'plane-video-player')">
+                    An airplane flies overhead
+                  </button>
+                  <button class="button is-primary is-small" aria-label="Select rooster crowing audio" onclick="changeVideo('./static/videos/plane/d8ya35A6yzk_000075_1.mp4', this, 'plane-video-player')">
+                    People cheer and an airplane flies
+                  </button>
+                  <button class="button is-info is-small" aria-label="Select male speaking audio" onclick="changeVideo('./static/videos/plane/d8ya35A6yzk_000075_2.mp4', this, 'plane-video-player')">
+                    Gunshots are fired and an airplane flies
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- train examples -->
+          <div class="custom-container" id="bird-refoley">
+            <div class="custom-columns">
+              <!-- Video Section -->
+              <div class="custom-video-container">
+                <video id="train-video-player" unmute playsinline class="custom-video">
+                  <source id="video-source" src="./static/videos/train/_eceNIlHt4E_000204_0.mp4#t=0.0001" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+          
+              <!-- Choice Section -->
+              <div class="custom-button-container">
+                <div class="custom-button-area">
+                  <button class="button is-link is-small" aria-label="Select bird chirping audio" onclick="changeVideo('./static/videos/train/_eceNIlHt4E_000204_0.mp4', this, 'train-video-player')">
+                  The train horn blares
+                  </button>
+                  <button class="button is-primary is-small" aria-label="Select rooster crowing audio" onclick="changeVideo('./static/videos/train/_eceNIlHt4E_000204_1.mp4', this, 'train-video-player')">
+                    The train horn blares and fireworks explode
+                  </button>
+                  <button class="button is-info is-small" aria-label="Select male speaking audio" onclick="changeVideo('./static/videos/train/_eceNIlHt4E_000204_2.mp4', this, 'train-video-player')">
+                    The train horn blares and the wind blows
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Our model is capable of generating realistic audio for Sora videos in a zero-shot setting.
+          </p>
+          
+          <!-- otter examples -->
           <div class="custom-container" id="bird-refoley">
             <div class="custom-columns">
               <!-- Video Section -->
@@ -268,6 +328,34 @@
                   </button>
                   <button class="button is-success is-small" aria-label="Select sheep bleating audio" onclick="changeVideo('./static/videos/our_otter_countryMusic.mp4', this, 'bird-video-player')">
                     An otter growls and country music is playing
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- suv examples -->
+          <div class="custom-container" id="bird-refoley">
+            <div class="custom-columns">
+              <!-- Video Section -->
+              <div class="custom-video-container">
+                <video id="suv-video-player" unmute playsinline class="custom-video">
+                  <source id="video-source" src="./static/videos/suv_sora/our_suv.mp4#t=0.0001" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+          
+              <!-- Choice Section -->
+              <div class="custom-button-container">
+                <div class="custom-button-area">
+                  <button class="button is-link is-small" aria-label="Select bird chirping audio" onclick="changeVideo('./static/videos/suv_sora/our_suv.mp4', this, 'suv-video-player')">
+                  A car races down the road.
+                  </button>
+                  <button class="button is-primary is-small" aria-label="Select rooster crowing audio" onclick="changeVideo('./static/videos/suv_sora/our_suv_police.mp4', this, 'suv-video-player')">
+                    A car races down the road and police siren blares
+                  </button>
+                  <button class="button is-info is-small" aria-label="Select male speaking audio" onclick="changeVideo('./static/videos/suv_sora/our_suv_rain.mp4', this, 'suv-video-player')">
+                    A car races down the road and rain falls
                   </button>
                 </div>
               </div>
